@@ -1,0 +1,168 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+header {
+    background: #ffffff;
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #1d4ed8;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #334155;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #2563eb;
+}
+
+main {
+    max-width: 1000px;
+    margin: 45px auto;
+    padding: 0 20px;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.fag-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.fagkort {
+    padding: 25px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #1e293b;
+    border: 1px solid #e2e8f0;
+    background: white;
+    transition: transform 0.2s;
+}
+
+.fagkort:hover {
+    transform: translateY(-4px);
+}
+
+.fagkort h2 {
+    font-size: 30px;
+    margin: 0;
+}
+
+.fag-1t {
+    border-top: 5px solid #2563eb;
+}
+
+.fag-r1 {
+    border-top: 5px solid #16a34a;
+}
+
+.fag-r2 {
+    border-top: 5px solid #9333ea;
+}
+
+.fagkort span {
+    color: #2563eb;
+    font-weight: bold;
+}
+
+.tema-liste {
+    display: grid;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.tema-lenke {
+    display: block;
+    background: white;
+    padding: 18px 20px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #1e293b;
+}
+
+.tema-lenke:hover {
+    border-color: #2563eb;
+    background: #eff6ff;
+}
+
+.breadcrumb {
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+.breadcrumb a {
+    color: #2563eb;
+}
+
+details {
+    margin-top: 20px;
+    border: 1px solid #93c5fd;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #dbeafe;
+}
+
+summary {
+    padding: 15px;
+    color: #1d4ed8;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.svar-innhold {
+    background: white;
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #64748b;
+}
+
+@media (max-width: 650px) {
+    header {
+        flex-direction: column;
+    }
+
+    .fag-container {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+}

@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1T – Andregradsuttrykk</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header>
+    <a class="logo" href="../index.html">Matematikk</a>
+    <nav>
+        <a href="index.html">1T</a>
+        <a href="../r1/index.html">R1</a>
+        <a href="../r2/index.html">R2</a>
+    </nav>
+</header>
+
+<main>
+    <div class="breadcrumb">
+        <a href="../index.html">Hjem</a> /
+        <a href="index.html">1T</a> /
+        Algebra
+    </div>
+
+    <h1>Algebra</h1>
+    <p>Her kan du legge inn teori og oppgaver.</p>
+
+    <section>
+        <h2>Oppgave 1</h2>
+        <p>Skriv oppgaven din her.</p>
+
+        <details>
+            <summary>Svar</summary>
+            <div class="svar-innhold">
+                Skriv løsningen din her.
+            </div>
+        </details>
+    </section>
+
+</main>
+
+<footer>
+    <p>Matematikkportalen</p>
+</footer>
+
+</body>
+</html>

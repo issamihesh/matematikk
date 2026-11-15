@@ -382,35 +382,64 @@ x + y = 1
 
 
 
+
+
 <!-- OPPGAVE 9 -->
 <section class="oppgave">
 <h2>Oppgave 9</h2>
-<p>Løs likningssystemet:</p>
-<div class="regnestykke">
-x · y = 15<br>
-2x + 2y = 16
-</div>
+<p>En elev skrev programmet nedenfor. Hva blir utskriften?</p>
 <details>
 <summary>Vis løsning</summary>
 <div class="losning">
-<p>Vi forenkler den andre likningen:</p>
-<p>x + y = 8</p>
-<p>Fra denne får vi:</p>
-<p>y = 8 − x</p>
-<p>Setter inn i den første:</p>
-<p>x · (8 − x) = 15</p>
-<p>8x − x² = 15</p>
-<p>x² − 8x + 15 = 0</p>
-<p>(x − 3)(x − 5) = 0</p>
-<p>Dermed får vi:</p>
-<p>x = 3 eller x = 5</p>
-<p>Vi finner y:</p>
-<p>Når x = 3: y = 5.</p>
-<p>Når x = 5: y = 3.</p>
-<p class="svar">Svar: (x, y) = (3, 5) eller (5, 3).</p>
+<p>Prøv å kjøre programmet:</p>
+<textarea id="pythonKode9" rows="5" style="width:100%; font-family:monospace;">for x in range(5):
+    print(x)</textarea>
+<p>
+<button onclick="kjorPython9()">▶ Run</button>
+</p>
+<p>Utskriften blir:</p>
+<pre id="resultat9">Resultatet vises her ...</pre>
+<p>Forklaring:</p>
+<p>Programmet bruker en for-løkke med range(5).</p>
+<p>Dette betyr at løkken kjører fem ganger, med verdiene 0, 1, 2, 3 og 4.</p>
+<p class="svar">Svar: 0, 1, 2, 3, 4.</p>
 </div>
 </details>
 </section>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.27.7/full/pyodide.js"></script>
+<script>
+let pyodide9;
+async function kjorPython9() {
+    const resultat = document.getElementById("resultat9");
+    const kode = document.getElementById("pythonKode9").value;
+    resultat.textContent = "Kjører programmet ...";
+    try {
+        if (!pyodide9) {
+            pyodide9 = await loadPyodide();
+        }
+
+        let output = "";
+
+        pyodide9.setStdout({
+            batched: (tekst) => {
+                output += tekst + "\n";
+            }
+        });
+
+        await pyodide9.runPythonAsync(kode);
+
+        resultat.textContent = output || "(Ingen utskrift)";
+    } catch (feil) {
+        resultat.textContent = "Feil: " + feil;
+    }
+}
+</script>
+
+
+
+
+
+    
 
 
 

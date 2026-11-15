@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matematikk R2</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f5f9;
+    text-align: center;
+    padding: 30px 15px;
+}
+h1 { color: #1d3557; }
+.del {
+    display: block;
+    max-width: 400px;
+    margin: 12px auto;
+    padding: 18px;
+    background: white;
+    border-radius: 10px;
+    color: #1d3557;
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: bold;
+}
+.del:hover { background: #dce8f7; }
+</style>
+</head>
+<body>
+
+<a href="index.html">← Tilbake</a>
+<h1>Matematikk R2</h1>
+<p>Velg del:</p>
+
+<div id="deler"></div>
+
+<script>
+const container = document.getElementById("deler");
+
+for (let i = 1; i <= 20; i++) {
+    const lenke = document.createElement("a");
+    lenke.className = "del";
+    lenke.href = "r1-del" + i + ".html";
+    lenke.textContent = "Del " + i;
+    container.appendChild(lenke);
+}
+</script>
+
+</body>
+</html>

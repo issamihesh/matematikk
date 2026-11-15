@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Matematikk 1T</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f3f6fb;
+    color: #1d3557;
+    padding: 25px 15px;
+}
+
+main {
+    max-width: 850px;
+    margin: auto;
+}
+
+.tilbake {
+    display: inline-block;
+    margin-bottom: 25px;
+    color: #2864a0;
+    text-decoration: none;
+}
+
+header {
+    background: #1d3557;
+    color: white;
+    padding: 30px;
+    border-radius: 14px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    margin: 0 0 10px;
+}
+
+.deler {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 14px;
+}
+
+.del {
+    background: white;
+    padding: 22px 10px;
+    border-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+    color: #1d3557;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 2px 10px #0000000b;
+    border: 1px solid #e5eaf1;
+}
+
+.del:hover {
+    background: #e5effb;
+    border-color: #8db6e4;
+}
+
+</style>
+</head>
+
+<body>
+
+<main>
+
+<a class="tilbake" href="../index.html">
+← Tilbake til forsiden
+</a>
+
+<header>
+    <h1>Matematikk 1T</h1>
+    <p>Velg en del for å åpne oppgavene og løsningene.</p>
+</header>
+
+<div class="deler" id="deler"></div>
+
+</main>
+
+<script>
+const container = document.getElementById("deler");
+
+for (let i = 1; i <= 20; i++) {
+    const lenke = document.createElement("a");
+
+    lenke.className = "del";
+    lenke.href = "del" + i + ".html";
+    lenke.textContent = "Del " + i;
+
+    container.appendChild(lenke);
+}
+</script>
+
+</body>
+</html>

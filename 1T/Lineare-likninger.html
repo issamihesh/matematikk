@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lineære likninger – Matematikk 1T</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f6fb;
+    color: #1d3557;
+    margin: 0;
+    padding: 25px 15px;
+}
+
+main {
+    max-width: 850px;
+    margin: auto;
+}
+
+header {
+    background: #1d3557;
+    color: white;
+    padding: 28px;
+    border-radius: 14px;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    margin-top: 0;
+}
+
+.tilbake {
+    color: #2864a0;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.oppgave {
+    background: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px #0000000b;
+}
+
+.oppgave h2 {
+    color: #2864a0;
+    margin-top: 0;
+}
+
+.oppgavetekst {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.losning {
+    display: none;
+    background: #edf4fb;
+    padding: 20px;
+    margin-top: 18px;
+    border-radius: 10px;
+    line-height: 1.8;
+}
+
+button {
+    background: #2864a0;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d3557;
+}
+
+footer {
+    text-align: center;
+    color: #718096;
+    padding: 25px;
+}
+</style>
+</head>
+
+<body>
+
+<main>
+
+<a class="tilbake" href="index.html">
+← Tilbake til Matematikk 1T
+</a>
+
+<header>
+    <h1>Lineære likninger</h1>
+    <p>Matematikk 1T</p>
+    <p>Oppgaver med trinnvise løsningsforslag.</p>
+</header>
+
+<!-- OPPGAVE 1 -->
+
+<section class="oppgave">
+
+<h2>Oppgave 1</h2>
+
+<div class="oppgavetekst">
+    Løs likningen:
+
+    <p><strong>3x + 7 = 22</strong></p>
+</div>
+
+<button onclick="visLosning('losning1', this)">
+    Vis løsning
+</button>
+
+<div class="losning" id="losning1">
+
+    <h3>Løsningsforslag</h3>
+
+    Vi starter med:
+
+    <p>3x + 7 = 22</p>
+
+    Vi trekker fra 7 på begge sider:
+
+    <p>3x = 22 − 7</p>
+
+    <p>3x = 15</p>
+
+    Vi deler begge sider med 3:
+
+    <p>x = 15 / 3</p>
+
+    <p><strong>SVAR: x = 5</strong></p>
+
+</div>
+
+</section>
+
+
+<!-- OPPGAVE 2 -->
+
+<section class="oppgave">
+
+<h2>Oppgave 2</h2>
+
+<div class="oppgavetekst">
+    Løs likningen:
+
+    <p><strong>4(x − 2) = 2x + 6</strong></p>
+</div>
+
+<button onclick="visLosning('losning2', this)">
+    Vis løsning
+</button>
+
+<div class="losning" id="losning2">
+
+    <h3>Løsningsforslag</h3>
+
+    Vi starter med:
+
+    <p>4(x − 2) = 2x + 6</p>
+
+    Vi ganger inn parentesen:
+
+    <p>4x − 8 = 2x + 6</p>
+
+    Vi trekker fra 2x på begge sider:
+
+    <p>2x − 8 = 6</p>
+
+    Vi legger til 8 på begge sider:
+
+    <p>2x = 14</p>
+
+    Vi deler begge sider med 2:
+
+    <p>x = 14 / 2</p>
+
+    <p><strong>SVAR: x = 7</strong></p>
+
+</div>
+
+</section>
+
+<footer>
+    Matematikk 1T – Lineære likninger
+</footer>
+
+</main>
+
+<script>
+function visLosning(id, knapp) {
+
+    const losning = document.getElementById(id);
+
+    if (losning.style.display === "block") {
+        losning.style.display = "none";
+        knapp.textContent = "Vis løsning";
+    } else {
+        losning.style.display = "block";
+        knapp.textContent = "Skjul løsning";
+    }
+
+}
+</script>
+
+</body>
+</html>

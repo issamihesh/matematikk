@@ -4,102 +4,55 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Matematikk 1T – Temaer</title>
+<title>Matematikk 1T</title>
 
 <style>
-* {
-    box-sizing: border-box;
-}
-
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
     background: #f3f6fb;
     color: #1d3557;
-    padding: 25px 15px;
+    margin: 0;
+    padding: 30px 15px;
 }
 
 main {
-    max-width: 950px;
+    max-width: 800px;
     margin: auto;
 }
 
-.tilbake {
-    display: inline-block;
-    margin-bottom: 22px;
-    color: #2864a0;
-    text-decoration: none;
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
 }
 
-header {
-    background: linear-gradient(135deg, #142d4e, #2864a0);
-    color: white;
-    padding: 35px 25px;
-    border-radius: 15px;
+.intro {
+    text-align: center;
+    color: #64748b;
     margin-bottom: 30px;
-}
-
-header h1 {
-    margin: 0 0 10px;
-    font-size: 30px;
-}
-
-header p {
-    margin-bottom: 0;
-    color: #dce9f7;
-}
-
-.seksjon {
-    margin-bottom: 28px;
-}
-
-.seksjon h2 {
-    font-size: 20px;
-    border-bottom: 2px solid #dce5f0;
-    padding-bottom: 10px;
-}
-
-.temaer {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 14px;
 }
 
 .tema {
     display: block;
     background: white;
-    padding: 20px;
+    padding: 22px;
+    margin-bottom: 15px;
     border-radius: 12px;
     text-decoration: none;
     color: #1d3557;
-    border: 1px solid #e2e9f2;
-    box-shadow: 0 2px 8px #00000008;
-    transition: 0.2s;
+    font-size: 19px;
+    font-weight: bold;
+    border: 1px solid #e2e8f0;
 }
 
 .tema:hover {
-    transform: translateY(-3px);
-    background: #eaf2fc;
-    border-color: #8db6e4;
+    background: #e8f1fc;
 }
 
-.tema h3 {
-    font-size: 17px;
-    margin: 0 0 8px;
-}
-
-.tema p {
-    color: #718096;
-    font-size: 13px;
-    margin: 0;
-}
-
-footer {
-    text-align: center;
-    padding: 30px 10px;
-    color: #718096;
-    font-size: 13px;
+.tilbake {
+    display: inline-block;
+    margin-bottom: 25px;
+    color: #2563a6;
+    text-decoration: none;
 }
 </style>
 </head>
@@ -108,111 +61,23 @@ footer {
 
 <main>
 
-<a class="tilbake" href="../index.html">
-← Tilbake til forsiden
+<a class="tilbake" href="../index.html">← Tilbake til forsiden</a>
+
+<h1>Matematikk 1T</h1>
+
+<p class="intro">Velg et tema</p>
+
+<a class="tema" href="lineare-likninger.html">
+    1. Lineære likninger
 </a>
 
-<header>
-    <h1>Matematikk 1T</h1>
-    <p>Velg et tema for å finne oppgaver og løsningsforslag.</p>
-</header>
+<a class="tema" href="lineare-funksjoner.html">
+    2. Lineære funksjoner
+</a>
 
-<section class="seksjon">
-    <h2>Algebra og likninger</h2>
-    <div class="temaer">
-
-        <a class="tema" href="lineare-likninger.html">
-            <h3>Lineære likninger</h3>
-            <p>Likninger med én ukjent</p>
-        </a>
-
-        <a class="tema" href="lineare-likningssystemer.html">
-            <h3>Lineære likningssystemer</h3>
-            <p>To eller flere likninger med flere ukjente</p>
-        </a>
-
-        <a class="tema" href="potenser-og-rotter.html">
-            <h3>Potenser og røtter</h3>
-            <p>Potensregler og rotuttrykk</p>
-        </a>
-
-        <a class="tema" href="algebraiske-uttrykk.html">
-            <h3>Algebraiske uttrykk</h3>
-            <p>Regneregler og faktorisering</p>
-        </a>
-
-    </div>
-</section>
-
-<section class="seksjon">
-    <h2>Funksjoner</h2>
-    <div class="temaer">
-
-        <a class="tema" href="lineare-funksjoner.html">
-            <h3>Lineære funksjoner</h3>
-            <p>Stigningstall, konstantledd og grafer</p>
-        </a>
-
-        <a class="tema" href="andregradsfunksjoner.html">
-            <h3>Andregradsfunksjoner</h3>
-            <p>Parabler, nullpunkter og toppunkt</p>
-        </a>
-
-        <a class="tema" href="polynomfunksjoner.html">
-            <h3>Polynomfunksjoner</h3>
-            <p>Polynomer og grafisk analyse</p>
-        </a>
-
-        <a class="tema" href="funksjonsanalyse.html">
-            <h3>Funksjonsanalyse</h3>
-            <p>Definisjonsmengde og verdimengde</p>
-        </a>
-
-    </div>
-</section>
-
-<section class="seksjon">
-    <h2>Eksponentialfunksjoner og modellering</h2>
-    <div class="temaer">
-
-        <a class="tema" href="eksponentialfunksjoner.html">
-            <h3>Eksponentialfunksjoner</h3>
-            <p>Vekst og nedgang</p>
-        </a>
-
-        <a class="tema" href="matematisk-modellering.html">
-            <h3>Matematisk modellering</h3>
-            <p>Modeller fra virkeligheten</p>
-        </a>
-
-    </div>
-</section>
-
-<section class="seksjon">
-    <h2>Geometri og trigonometri</h2>
-    <div class="temaer">
-
-        <a class="tema" href="trigonometri.html">
-            <h3>Trigonometri</h3>
-            <p>Sinus, cosinus og tangens</p>
-        </a>
-
-        <a class="tema" href="geometri.html">
-            <h3>Geometri</h3>
-            <p>Lengder, vinkler og arealer</p>
-        </a>
-
-        <a class="tema" href="vektorer.html">
-            <h3>Vektorer</h3>
-            <p>Vektorregning og anvendelser</p>
-        </a>
-
-    </div>
-</section>
-
-<footer>
-    Matematikk 1T – Oppgaver og løsningsforslag
-</footer>
+<a class="tema" href="lineare-likningssystemer.html">
+    3. Lineære likningssystemer
+</a>
 
 </main>
 

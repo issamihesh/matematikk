@@ -384,10 +384,18 @@ x + y = 1
 
 
 
+
 <!-- OPPGAVE 9 -->
 <section class="oppgave">
 <h2>Oppgave 9</h2>
-<p>En elev skrev programmet nedenfor. Hva blir utskriften?</p>
+<p>En elev skrev programmet nedenfor.</p>
+<div class="regnestykke">
+<pre>
+for x in range(5):
+    print(x)
+</pre>
+</div>
+<p>Hva blir utskriften?</p>
 <details>
 <summary>Vis løsning</summary>
 <div class="losning">
@@ -400,8 +408,7 @@ x + y = 1
 <p>Utskriften blir:</p>
 <pre id="resultat9">Resultatet vises her ...</pre>
 <p>Forklaring:</p>
-<p>Programmet bruker en for-løkke med range(5).</p>
-<p>Dette betyr at løkken kjører fem ganger, med verdiene 0, 1, 2, 3 og 4.</p>
+<p>range(5) gjør at løkken kjører fem ganger, med verdiene 0, 1, 2, 3 og 4.</p>
 <p class="svar">Svar: 0, 1, 2, 3, 4.</p>
 </div>
 </details>
@@ -417,17 +424,13 @@ async function kjorPython9() {
         if (!pyodide9) {
             pyodide9 = await loadPyodide();
         }
-
         let output = "";
-
         pyodide9.setStdout({
             batched: (tekst) => {
                 output += tekst + "\n";
             }
         });
-
         await pyodide9.runPythonAsync(kode);
-
         resultat.textContent = output || "(Ingen utskrift)";
     } catch (feil) {
         resultat.textContent = "Feil: " + feil;
@@ -435,62 +438,6 @@ async function kjorPython9() {
 }
 </script>
 
-
-
-
-
-    
-
-
-
-<!-- OPPGAVE 10 -->
-<section class="oppgave">
-<h2>Oppgave 9</h2>
-<p>Skriv og kjør Python-programmet. Hva skriver programmet ut?</p>
-
-<textarea id="pythonKode9" rows="5" style="width:100%; font-family:monospace;">for x in range(5):
-    print(x)</textarea>
-
-<br><br>
-
-<button onclick="kjorPython9()">Kjør program</button>
-
-<h3>Resultat:</h3>
-<pre id="resultat9" style="background:#eee; padding:12px;">Resultatet vises her ...</pre>
-</section>
-
-<script src="https://cdn.jsdelivr.net/pyodide/v0.27.7/full/pyodide.js"></script>
-
-<script>
-let pyodide9;
-
-async function kjorPython9() {
-    const resultat = document.getElementById("resultat9");
-    const kode = document.getElementById("pythonKode9").value;
-
-    resultat.textContent = "Kjører programmet ...";
-
-    try {
-        if (!pyodide9) {
-            pyodide9 = await loadPyodide();
-        }
-
-        let output = "";
-
-        pyodide9.setStdout({
-            batched: (tekst) => {
-                output += tekst + "\n";
-            }
-        });
-
-        await pyodide9.runPythonAsync(kode);
-
-        resultat.textContent = output || "(Ingen utskrift)";
-    } catch (feil) {
-        resultat.textContent = "Feil: " + feil;
-    }
-}
-</script>
 
 
 

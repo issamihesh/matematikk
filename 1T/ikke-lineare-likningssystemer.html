@@ -414,6 +414,64 @@ x · y = 15<br>
 
 
 
+<!-- OPPGAVE 10 -->
+<section class="oppgave">
+<h2>Oppgave 9</h2>
+<p>Skriv og kjør Python-programmet. Hva skriver programmet ut?</p>
+
+<textarea id="pythonKode9" rows="5" style="width:100%; font-family:monospace;">for x in range(5):
+    print(x)</textarea>
+
+<br><br>
+
+<button onclick="kjorPython9()">Kjør program</button>
+
+<h3>Resultat:</h3>
+<pre id="resultat9" style="background:#eee; padding:12px;">Resultatet vises her ...</pre>
+</section>
+
+<script src="https://cdn.jsdelivr.net/pyodide/v0.27.7/full/pyodide.js"></script>
+
+<script>
+let pyodide9;
+
+async function kjorPython9() {
+    const resultat = document.getElementById("resultat9");
+    const kode = document.getElementById("pythonKode9").value;
+
+    resultat.textContent = "Kjører programmet ...";
+
+    try {
+        if (!pyodide9) {
+            pyodide9 = await loadPyodide();
+        }
+
+        let output = "";
+
+        pyodide9.setStdout({
+            batched: (tekst) => {
+                output += tekst + "\n";
+            }
+        });
+
+        await pyodide9.runPythonAsync(kode);
+
+        resultat.textContent = output || "(Ingen utskrift)";
+    } catch (feil) {
+        resultat.textContent = "Feil: " + feil;
+    }
+}
+</script>
+
+
+
+
+
+
+
+    
+
+
 
 <footer>
 Matematikk 1T – Andregradslikninger
